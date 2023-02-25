@@ -8,7 +8,7 @@ const Card = ({searchItem, error, isLoading}) => {
       <div className='User_Card'>
         {isLoading && <p className='statusMsg'>Loading Data...</p>}
           {!isLoading && error && <p className='statusMsg' style={{ color: 'red' }}>{error}</p>}
-           <div className='Card_container'>
+          {searchItem?.length? <div className='Card_container'>
           {!isLoading && !error &&(searchItem?.map((searchResult) => {
             return  (
                   
@@ -24,7 +24,7 @@ const Card = ({searchItem, error, isLoading}) => {
                  </div>
               )
           }))}
-               </div>
+               </div>:<p>No Data ....</p>}
     </div>
   )
 }
