@@ -1,0 +1,31 @@
+.DropDown{
+    position: absolute;
+    top: 90px;
+    z-index:10;
+    padding:  10px 0;
+    box-sizing: border-box;
+    right: 20px;
+    border-radius:8px;
+    background-color: #fff;
+    border: 1px solid #727272;
+
+}
+.DropDownItem{
+    display: flex;
+    align-items: center;
+    padding: 7px 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+.DropDown:hover{
+
+    background-color: #e5e5e5;
+}
+.DropDownItem>span{
+font-size: 30px;
+}
+.DropDownItem>p{
+    margin: 0;
+    font-size: 15px;
+    margin-left: 15px;
+}

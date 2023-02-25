@@ -1,0 +1,9 @@
+.searchText{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+input:focus{
+    outline:none;
+}

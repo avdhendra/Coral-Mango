@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  gap:20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media (max-width: 500px) { 
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo_name{
+  display:none ;
+}
+.filter_dialog>p{
+  width: auto;
+}
+.content-table{
+  max-width: 450px; 
+  max-height: 300px;
+}
+.ToggleSwitch{
+  max-height: 1.3em;
+  max-width:4em;
+}
+.knob{
+  max-height: 1.2em;
+  max-width: 1.2em;
+}
+.knob.active{
+  left: 2.7em;
+}
+.toggle_name{
+  font-size: 15px;
+  font-weight: 300px;
+}
+.DropDown{
+  min-width: 50px;
+  min-height: 40px;
+}
+.DropDownItem{
+  max-height: 30px;
+  max-height: 20px;
+}
+.DropDownItem>span{
+font-size: 10px;
+}
+.DropDownItem>p{
+    margin: 0;
+    font-size: 10px;
+    margin-left: 10px;
+}
+.navbar{
+  justify-content: space-around;
+}
+ }
+@media (min-width: 768px) { 
+
+
+ }
+@media (min-width: 1024px) { 
+
+
 }

@@ -1,0 +1,39 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap:20px;
+    padding:5px;
+    align-items: center;
+    justify-content: center;
+}
+.switch{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+}
+.toggle_name{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500px;
+
+}
+.filter_dialog{
+background-color: rgb(138, 138, 212);
+border-radius: 5px;
+border: 1px solid blue;
+text-align: center;
+height:50px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+.filter_dialog>p{
+    color:blue;
+    font-size: 15px;
+    font-weight: 500;
+    
+}

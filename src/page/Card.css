@@ -1,0 +1,50 @@
+.User_card{
+    
+    display: flex;
+    flex-direction: row;
+   
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+    padding:5px;
+}
+
+.Card_container{
+    display: flex;
+    flex-direction: row;
+     flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+    align-items:center;
+
+}
+.username{
+    font-size: 30px;
+    text-align: center;
+}
+.occupation{
+    font-size: 15px;
+    text-align: center;
+}
+.age{
+    font-size: 12px;
+    text-align: center;
+}
+.card_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Card{    
+    width: 300px;
+    height: 250px;
+    background-color: rgb(254, 254, 254);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+transform:translateZ(0);
+transition:transform 0.25s ease-out;
+}
+.Card:hover{
+transform: scale(1.05);
+}
