@@ -7,6 +7,7 @@ import { Outlet } from 'react-router-dom';
 import Model from './Model'
 import DataContext from '../context/context'
 const Navigation = () => {
+    //getting value from the localstorage of user
     const auth = localStorage.getItem('user')
    const {model,setModel}=useContext(DataContext)
     return (

@@ -4,16 +4,19 @@ import "./SignIn.css"
 import { useNavigate } from 'react-router-dom'
 
 const SignIn = () => {
+
     const { setAuth } = useContext(DataContext)
-    const userRef = useRef()
-    
-   
+    //hooks
+    const userRef = useRef()   
     const errRef = useRef()
+
+    //states
     const [username, setUser] = useState('')
     const [pwd, setPwd] = useState('')
     const [errMsg, setErrMsg] = useState('')
 
     const navigate = useNavigate();
+    
     useEffect(() => {
         userRef.current.focus()
     }, [userRef])
@@ -21,16 +24,20 @@ const SignIn = () => {
         setErrMsg("")
     }, [username, pwd])
     const handleSubmit = async (e) => {
+        //prevent from refreshing the page
         e.preventDefault()
         setUser(userRef.current.value)
-        
+        //prevent the access if username and pwd are different
         if (username === "demo@coralmango.com" && pwd === "demo123") {
             setAuth({ username, pwd })
+            //set the value of the username in localstorage
             localStorage.setItem("user", username)
             setUser('');
             setPwd('');
+            //navigate to the main page route
             navigate('/main')
         } else {
+            //show message on invalid access
             setErrMsg("Invalid Credentials!")
             errRef.current.focus();
         }

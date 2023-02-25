@@ -10,9 +10,11 @@ import { useEffect } from 'react';
 
 
 function App() {
+  //getting value of username from localstorage  
   const auth = localStorage.getItem("user")
 const navigate=useNavigate()
 
+  //hook execute on change of auth and navigate variable
   useEffect(() => {
     if (auth) {
       navigate('/main')
@@ -22,13 +24,14 @@ const navigate=useNavigate()
   }
 },[auth,navigate])
 
-
+//protect the component from unauthorized access
   const ProtectedRoute = ({ children }) => {
     if (!auth) {
       return <Navigate to='/auth' />
     }
     return children
   }
+
   const SignInProtected = ({ children }) => {
     if (auth) {
       return <Navigate to='/main'/>
