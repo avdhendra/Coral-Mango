@@ -6,7 +6,7 @@
 - Axios
 - React-Router-Dom
 - React-Icons
-
+- lottie
 
 ## Setup
 
