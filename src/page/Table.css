@@ -1,8 +1,8 @@
 .content-table{
     margin:25px 0;
     font-size: 0.9em;
-      width:600px;
-      height: 300px;
+max-width: 700px; 
+  max-height: 400px;
     border: 1px solid #6b6969;
 }
 .content-table thead tr{
@@ -34,5 +34,7 @@
     color: #009879;
 }
 td{
+    max-height: 200px;
+    
   border:1px solid#6b6969;
 }

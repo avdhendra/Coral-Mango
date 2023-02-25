@@ -1,0 +1,9 @@
+.NotFound_Container{
+    position: fixed;
+  top: 6.4rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

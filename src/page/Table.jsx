@@ -12,7 +12,7 @@ const Table = ({searchItem, error ,isLoading}) => {
             
        { !isLoading && !error &&(searchItem?.length? <div>
             
-            <table className='content-table'>
+            <table  className='content-table'>
                 <thead>
                     <tr>
                         <th>Name</th>

@@ -4,7 +4,9 @@ import "./SignIn.css"
 import { useNavigate } from 'react-router-dom'
 
 const SignIn = () => {
-
+ const auth=localStorage.getItem('user');
+   
+   
     const { setAuth } = useContext(DataContext)
     //hooks
     const userRef = useRef()   
@@ -23,6 +25,14 @@ const SignIn = () => {
     useEffect(() => {
         setErrMsg("")
     }, [username, pwd])
+
+useEffect(() => {
+        if (auth) {
+        navigate("/main")
+    }
+},[auth,navigate])
+
+
     const handleSubmit = async (e) => {
         //prevent from refreshing the page
         e.preventDefault()
@@ -34,8 +44,7 @@ const SignIn = () => {
             localStorage.setItem("user", username)
             setUser('');
             setPwd('');
-            //navigate to the main page route
-            navigate('/main')
+            
         } else {
             //show message on invalid access
             setErrMsg("Invalid Credentials!")
@@ -46,6 +55,7 @@ const SignIn = () => {
 
 
     }
+     
     return (
         <div className='signIn' >
             <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
